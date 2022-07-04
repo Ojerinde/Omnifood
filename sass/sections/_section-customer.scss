@@ -1,0 +1,98 @@
+.section {
+  &__customer {
+    padding: 10rem 10vw;
+    background-image: linear-gradient(
+        rgba(10, 10, 10, 0.8),
+        rgba(10, 10, 10, 0.8)
+      ),
+      url(../../css/images/back-customers.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 2rem;
+    color: $base-color;
+    font-style: italic;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 10rem 2vw 4rem 2vw;
+    }
+  }
+}
+
+.customer {
+  &__flex {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex-basis: 32%;
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 4rem auto;
+      width: 70%;
+    }
+  }
+
+  &__paragraph {
+    line-height: 1.5;
+    position: relative;
+
+    &::before {
+      content: "\201C";
+      font-size: 9rem;
+      display: block;
+      position: absolute;
+      top: -6rem;
+      left: -1rem;
+    }
+  }
+
+  //OR display the whole paragraph as block and not use absolute
+
+  &__details {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+      justify-content: unset;
+    }
+
+    &__picture {
+      flex-basis: 30%;
+
+      @media only screen and (max-width: $bp-small) {
+        margin-right: 1.5rem;
+      }
+    }
+
+    &__name {
+      flex-basis: 70%;
+      font-size: 2rem;
+      flex-basis: 80%;
+
+      @media only screen and (max-width: $bp-smallest) {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &__photo {
+    display: block;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      height: 7rem;
+      width: 7rem;
+    }
+  }
+}

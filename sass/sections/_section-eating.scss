@@ -1,0 +1,95 @@
+.section__eating {
+  padding: 7rem 8rem;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 6rem 3rem;
+  }
+}
+
+.eating {
+  &__container {
+    width: 90%;
+    margin: 8rem auto;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: $bp-large) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      width: 60%;
+    }
+  }
+
+  &__item {
+    flex-basis: 31%;
+    box-shadow: 0 2rem 2rem rgba($color-footer, 0.2);
+    transition: all 0.3s;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 10rem;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    div {
+      padding: 0 2rem;
+      &:not(:last-of-type) {
+        border-bottom: 0.1rem solid $color-footer-1;
+      }
+    }
+  }
+  &__paragraph {
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    color: $color-secondary;
+    @media only screen and (max-width: $bp-largest) {
+      letter-spacing: normal;
+    }
+
+    span {
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+    }
+
+    &-2 {
+      margin-bottom: 1.3rem;
+      font-size: 1.75rem;
+      padding-bottom: 0.8rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding-bottom: 0.8rem;
+  }
+
+  &__items {
+    font-size: 2rem;
+    margin: 2rem 0;
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.5;
+      margin: 1.5rem 0;
+    }
+
+    &::before {
+      content: "\2714";
+      font-size: 2.5rem;
+      color: $color-secondary;
+    }
+  }
+}
+
+.not__eating {
+  &::before {
+    content: "\2716" !important;
+    font-size: 2.5rem;
+    color: $color-secondary;
+  }
+}

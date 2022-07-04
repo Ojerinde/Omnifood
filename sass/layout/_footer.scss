@@ -1,0 +1,108 @@
+.footer {
+  padding: 8rem 7rem;
+  background-color: $color-footer;
+  color: $color-footer-1;
+
+  &__first {
+    display: flex;
+  }
+
+  &__lists {
+    flex-basis: 30%;
+    margin-right: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-basis: 40%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-basis: 60%;
+    }
+  }
+
+  &__links {
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: block;
+    color: $color-footer-1;
+    transition: all 0.3s;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.7rem;
+    }
+
+    &:hover {
+      transform: scale(1.3) skewY(6deg);
+      background-color: $base-color;
+      color: $color-footer;
+    }
+  }
+
+  &__icons {
+    flex-basis: 25%;
+
+    &--list {
+      display: flex;
+      list-style: none;
+      justify-content: flex-end;
+    }
+  }
+
+  &__second {
+    margin-top: 4rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 70%;
+      margin: 4rem auto;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 90%;
+    }
+  }
+
+  &__paragraph {
+    font-size: 2rem;
+    color: $color-footer-1;
+  }
+}
+
+.icon__footer {
+  height: 3rem;
+  width: 3rem;
+  fill: $color-footer-1;
+  margin-left: 1rem;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &-1 {
+    &:hover {
+      fill: #4267b2; //Facebook
+    }
+  }
+
+  &-2 {
+    &:hover {
+      fill: #1da1f2; //Twitter
+    }
+  }
+
+  &-3 {
+    &:hover {
+      fill: #405de6; //instagram
+    }
+  }
+
+  &-4 {
+    &:hover {
+      fill: #00b2ff; //Messenger
+    }
+  }
+}
